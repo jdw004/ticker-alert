@@ -8,7 +8,7 @@
 
 ## Week 2: Backend + SMS
 
-- [ ] Build backend (Express) to analyze and store recommendations
+- [ ] Build backend (NestJS) to analyze and store recommendations
 - [ ] Integrate Twilio for SMS delivery
 - [ ] Store SMS delivery status
 
@@ -42,7 +42,7 @@ This MVP focuses on low cost, easy deployment, and a clean architecture that can
 
 **Framework:**
 
-- Express.js (Node.js)
+- NestJS.js (Node.js)
 - Lightweight, fast, and easy to build REST APIs
 - Well-supported ecosystem for Twilio, OpenAI, database clients
 
@@ -87,7 +87,7 @@ This MVP focuses on low cost, easy deployment, and a clean architecture that can
 
 | Component               | Cost                                  |
 | ----------------------- | ------------------------------------- |
-| Express.js + Node       | Free                                  |
+| NestJS                  | Free                                  |
 | Railway backend hosting | Free (starter tier)                   |
 | Railway Postgres        | Free (starter tier up to 0.5GB)       |
 | Next.js + Vercel        | Free (Vercel hobby tier)              |
