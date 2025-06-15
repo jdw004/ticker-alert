@@ -1,12 +1,18 @@
 import { Controller, Get } from '@nestjs/common';
-import { AppService } from './app.service';
+import { DataSource } from 'typeorm';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private dataSource: DataSource) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  async dbCheck() {
+    try {
+      await this.dataSource.query('SELECT 1');
+      return { status: 'connected' };
+    } catch (err) {
+      console.error('DB connection failed:', err);
+      return { status: 'failed', error: err.message };
+    }
   }
 }
